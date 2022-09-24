@@ -2,7 +2,7 @@ import fs from 'fs'
 
 const leerArchivoComoString = function() {
     let datos = fs.readFileSync('./Archivos/datos.txt', 'utf-8')
-    console.log(datos)
+    return datos
 }
 
 const escribirTextoEnArchivo = function(ruta, texto = 'Este es el texto por default', flag) {
@@ -23,12 +23,12 @@ const transformarStringEnArrayDeNumeros = function(cadena, separador) {
     let array = cadena.split(separador)
     array = array.map( elemento => Number(elemento))
     array = array.filter( elemento => !isNaN(elemento))
-    console.log(array)
+    return array
 }
 
 const transformarArrayDeNumerosAUnSoloString = function(array, separador) {
     let dev = array.reduce((previousValue, currentValue) => previousValue + separador + currentValue);
-    console.log(dev)
+    return dev
 }
 
 const combinarDosArrays = function(array1, array2) {
@@ -41,12 +41,13 @@ const combinarDosArrays = function(array1, array2) {
             nuevoArray.push(array2.shift())
         }
     } 
-    console.log(nuevoArray)
+    return nuevoArray
 }
 
 const combinarNArrays = function(listaDeArrays) {
     let array = listaDeArrays.flat()
-    console.log(array.sort((a,b) => a - b))
+    array = (array.sort((a,b) => a - b))
+    return array
 }
 
 
