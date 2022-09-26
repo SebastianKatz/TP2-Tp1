@@ -1,7 +1,7 @@
 import fs from 'fs'
 
-const leerArchivoComoString = function() {
-    let datos = fs.readFileSync('./Archivos/datos.txt', 'utf-8')
+const leerArchivoComoString = function(ruta) {
+    let datos = fs.readFileSync(ruta, 'utf-8')
     return datos
 }
 
