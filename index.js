@@ -4,17 +4,17 @@ const leerArchivoComoString = function(ruta='./Archivos/datos.txt') {
     return fs.readFileSync(ruta, 'utf-8')
 }
 
-const escribirTextoEnArchivo = function(ruta, texto = 'Este es el texto por default', flag) {
-    let escribir = true
-    try{
-        leerArchivoComoString()
-    } catch(e) {
-        escribir = flag
+const escribirTextoEnArchivo = function (ruta, texto, flag) {
+    try {  
+        leerArchivoComoString(ruta);
+        return fs.writeFileSync(ruta, texto);
     }
-    if (escribir) {
-    fs.writeFileSync(ruta,texto)
-    } else {
-    throw "el archivo no existe"
+    catch (error) {
+        if (flag) {
+            fs.writeFileSync(ruta, texto);
+        }
+        else{
+        throw "No se pudo escribir el archivo"}
     }
 }
 

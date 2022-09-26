@@ -8,7 +8,7 @@ import {
 } from './index.js'
 
 console.log(leerArchivoComoString('./Archivos/datos.txt'))
-escribirTextoEnArchivo('./Archivos/datos.txt', 'Prueba5', true)
+escribirTextoEnArchivo('./Archivos/datosss.txt', 'Prueba7', true)
 console.log(leerArchivoComoString())
 console.log(transformarStringEnArrayDeNumeros('123 | 456 | 789 | 1bc | 10', '|'))
 console.log(transformarArrayDeNumerosAUnSoloString([123, 456, 789, 10], ','))
