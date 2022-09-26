@@ -5,7 +5,7 @@ const leerArchivoComoString = function(ruta='./Archivos/datos.txt') {
 }
 
 const escribirTextoEnArchivo = function(ruta, texto = 'Este es el texto por default', flag) {
-    var escribir = true
+    let escribir = true
     try{
         leerArchivoComoString()
     } catch(e) {
