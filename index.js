@@ -1,8 +1,7 @@
 import fs from 'fs'
 
-const leerArchivoComoString = function(ruta) {
-    let datos = fs.readFileSync(ruta, 'utf-8')
-    return datos
+const leerArchivoComoString = function(ruta='./Archivos/datos.txt') {
+    return fs.readFileSync(ruta, 'utf-8')
 }
 
 const escribirTextoEnArchivo = function(ruta, texto = 'Este es el texto por default', flag) {
