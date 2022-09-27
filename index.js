@@ -20,8 +20,7 @@ const escribirTextoEnArchivo = function (ruta, texto, flag) {
 
 const transformarStringEnArrayDeNumeros = function(cadena, separador) {
     let array = cadena.split(separador)
-    array = array.map( elemento => Number(elemento))
-    array = array.filter( elemento => !isNaN(elemento))
+    array = array.filter( elemento => Number(elemento))
     return array
 }
 
